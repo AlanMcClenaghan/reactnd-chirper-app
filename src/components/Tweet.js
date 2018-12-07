@@ -32,7 +32,7 @@ class Tweet extends Component {
       return <p>This Tweet doesn't exist</p>
     }
 
-    const { name, avatar, timestamp, text, hasliked, likes, replies, id, parent } = tweet
+    const { name, avatar, timestamp, text, hasLiked, likes, replies, id, parent } = tweet
 
     return (
       <Link to={`/tweet/${id}`} className="tweet">
@@ -56,7 +56,7 @@ class Tweet extends Component {
             <TiArrowBackOutline className="tweet-icon" />
             <span>{replies !== 0 && replies}</span>
             <button className="heart-button" onClick={this.handleLike}>
-              {hasliked === true
+              {hasLiked === true
                 ? <TiHeartFullOutline color="#e0245e" className="tweet-icon" />
                 : <TiHeartOutline className="tweet-icon" />
               }
